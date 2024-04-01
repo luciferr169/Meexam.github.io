@@ -43,17 +43,10 @@
                         <label for="course" class="col-sm-2 col-form-label">Course</label>
                         <div class="col-sm-10">
                             <select name="course" id="course" class="form-control">
-                                <option value="02">B.Sc.(General/Hons.), Part-III, EXAM-2023</option>
-                                <option value="03">B.Com.(General/Hons.), PART-III, EXAM-2023</option>
-                                <option value="01">B.A.(General/Hons.), Part-III, EXAM-2021 or(/Pending result)</option>
-                                <option value="02">B.Sc.(General/Hons.), Part-III, EXAM-2021 or(/Pending result)</option>
-                                <option value="03">B.Com.(General/Hons.), PART-III, EXAM-2021 or(/Pending result)</option>
-                                <option value="01">B.A.(General/Hons.), Part-III, EXAM-2022</option>
-                                <option value="02">B.Sc.(General/Hons.), Part-III, EXAM-2022</option>
-                                <option value="03">B.Com.(General/Hons.), PART-III, EXAM2022</option>
-                                <option value="01">B.A.(General/Hons.), PART-I, EXAM-2023</option>
-                                <option value="02">B.Sc.(General/Hons.), PART-I, EXAM-2023</option>
-                                <option value="02">B.Com.(General/Hons.), PART-I, EXAM-2023</option>
+                                <option value="02">B.Sc, Year-I, Sem-I, Session-2023-27</option>
+                                <option value="03">B.A, Year-I, Sem-I, Session-2023-27</option>
+                                <option value="01">B.Com, Year-I, Sem-I, Session-2023-27</option>
+                            
                             </select>
                         </div>
                     </div>
@@ -89,8 +82,8 @@
                 alert('Please enter Roll Number.');
             } else {
                 var link = document.createElement('a');
-                link.href = 'Result1.pdf'; // Replace with actual file path
-                link.download = 'file.pdf'; // Replace with desired file name
+                link.href = 'Result2.pdf'; // Replace with actual file path
+                link.download = 'Result 2023-27 Sem 1.pdf'; // Replace with desired file name
                 document.body.appendChild(link);
                 link.click();
                 document.body.removeChild(link);
