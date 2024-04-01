@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MU</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script src="chrome-extension://idnnbdplmphpflfnlkomgpfbpcgelopg/inpage.js" id="xverse-wallet-provider" data-is-priority="true"></script>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/Home/About">About</a></li>
+                    <li><a href="/Home/Contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        
+        <div class="container">
+            <form class="card" id="form1" method="post" action="/MUResult/export">
+                <input name="__RequestVerificationToken" type="hidden" value="tGwW5eGVm_cSVutk1MXAOkHrxoDBsG64HHZVrcQBtn-fRRJ6D0vmP8PWnV3gtRngZpw2AoPOj70IeiWUAUNZrStegBkWegfUvdOJ1D1kRSo1">
+                <div class="card-header">
+                    Magadh University Result
+                    <marquee width="60%" direction="right" style="color:red">
+                        <a href="https://youtu.be/EO7wyIvAuF4" target="_blank">(Pending Result) or B.A/B.COM/B.SC Part III result is coming soon.</a>
+                    </marquee>
+                    <a href="https://youtu.be/09um7xugcIM" class="float-right" target="_blank"><i class="fa fa-youtube-play" style="font-size:20px;color:red"></i>Video Help ?</a>
+                </div>
+                <div class="card-body">
+                    <div class="form-group row">
+                        <label for="course" class="col-sm-2 col-form-label">Course</label>
+                        <div class="col-sm-10">
+                            <select name="course" id="course" class="form-control">
+                                <option value="02">B.Sc.(General/Hons.), Part-III, EXAM-2023</option>
+                                <option value="03">B.Com.(General/Hons.), PART-III, EXAM-2023</option>
+                                <option value="01">B.A.(General/Hons.), Part-III, EXAM-2021 or(/Pending result)</option>
+                                <option value="02">B.Sc.(General/Hons.), Part-III, EXAM-2021 or(/Pending result)</option>
+                                <option value="03">B.Com.(General/Hons.), PART-III, EXAM-2021 or(/Pending result)</option>
+                                <option value="01">B.A.(General/Hons.), Part-III, EXAM-2022</option>
+                                <option value="02">B.Sc.(General/Hons.), Part-III, EXAM-2022</option>
+                                <option value="03">B.Com.(General/Hons.), PART-III, EXAM2022</option>
+                                <option value="01">B.A.(General/Hons.), PART-I, EXAM-2023</option>
+                                <option value="02">B.Sc.(General/Hons.), PART-I, EXAM-2023</option>
+                                <option value="02">B.Com.(General/Hons.), PART-I, EXAM-2023</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="enrollmentNo" class="col-sm-2 col-form-label">Roll Number</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="enrollmentNo" id="enrollmentNo" placeholder="Roll Number">
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer text-center">
+                    <a href="javascript:void(0)" id="btnShow" class="btn btn-primary" onclick="downloadPDF()">Search</a>
+                </div>
+                <div class="row">
+                    <div class="container">
+                        <div class="card">
+                            <div id="StudentList" class="table table-responsive"></div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <hr>
+    </div>
+
+    <script src="/bundles/jquery?v=8Oos0avDZyPg-cbyVzvkIfERIE1DGSe3sRQdCSYrgEQ1"></script>
+    <script src="/bundles/bootstrap?v=M4Nk6kIOwMFflsEKET0iPL9i5YBqbzMzvUOrd8gyCnw1"></script>
+    <script>
+        function downloadPDF() {
+            var rollNumber = document.getElementById('enrollmentNo').value;
+            if (rollNumber === '') {
+                alert('Please enter Roll Number.');
+            } else {
+                var link = document.createElement('a');
+                link.href = 'Result1.pdf'; // Replace with actual file path
+                link.download = 'file.pdf'; // Replace with desired file name
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }
+        }
+    </script>
+</body>
+</html>
